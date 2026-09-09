@@ -71,9 +71,7 @@ export function Footer() {
   </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Minha Bateria Salvador. CNPJ e operação local no STIEP.</span><a href="/politicas-de-privacidade/">Política de privacidade</a></div></footer>;
 }
 
-export function MobileContact() {
-  return <div className="mobile-contact"><a href={`tel:+${site.phone}`} data-contact="phone" data-location="mobile-bar"><Phone size={19} aria-hidden="true" /> Ligar</a><ContactButton location="mobile-bar">Pedir bateria</ContactButton></div>;
-}
+export { MobileContact } from './mobile-contact';
 
 export function FAQ({ items }: { items: { question: string; answer: string }[] }) {
   return <div className="faq-list">{items.map(item => <details key={item.question}><summary>{item.question}<ChevronDown size={20} aria-hidden="true" /></summary><p>{item.answer}</p></details>)}</div>;
