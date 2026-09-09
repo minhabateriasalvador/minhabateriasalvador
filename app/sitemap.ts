@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/duvidas/bateria-comum-em-carro-start-stop/', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/sobre-nos/', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/contato/', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/politicas-de-privacidade/', priority: 0.5, changeFrequency: 'yearly' as const },
   ];
 
   return indexable

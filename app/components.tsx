@@ -68,7 +68,7 @@ export function Footer() {
       <address>{site.address}<br />CEP 41770-095</address>
       <p style={{ marginTop: '12px', fontSize: '0.8rem', color: '#8fa8cb' }}>Atendimento em domicílio em todos os bairros de Salvador e Lauro de Freitas.</p>
     </div>
-  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Minha Bateria Salvador. CNPJ e operação local no STIEP.</span><a href="https://minhabateria.com.br/politicas-de-privacidade/">Política de privacidade</a></div></footer>;
+  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Minha Bateria Salvador. CNPJ e operação local no STIEP.</span><a href="/politicas-de-privacidade/">Política de privacidade</a></div></footer>;
 }
 
 export function MobileContact() {
