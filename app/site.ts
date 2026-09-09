@@ -1,6 +1,6 @@
 export const site = {
   name: 'Minha Bateria Salvador',
-  url: 'https://minhabateriasalvador.com.br',
+  url: 'https://www.minhabateriasalvador.com.br',
   phone: '5571993151471',
   phoneDisplay: '(71) 99315-1471',
   email: 'contato@minhabateria.com.br',
@@ -9,8 +9,8 @@ export const site = {
   reviews: 'https://g.page/r/CYW5cmQjz2TREBM/review',
 };
 
-// Enable only after the production domain and migration have been verified.
-export const indexable = process.env.SITE_INDEXABLE === 'true' && process.env.VERCEL_ENV === 'production';
+// Site liberado e indexavel oficialmente para producao e Google Search Console
+export const indexable = true;
 
 export const social = {
   locale: 'pt_BR',
