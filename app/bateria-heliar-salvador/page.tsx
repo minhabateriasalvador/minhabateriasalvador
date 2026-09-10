@@ -49,10 +49,22 @@ export default function HeliarPage() {
       '@type': 'Brand',
       name: 'Heliar',
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '184',
+      bestRating: '5',
+      worstRating: '1',
+    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'BRL',
+      lowPrice: '379.00',
+      highPrice: '950.00',
+      offerCount: '6',
+      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
+      itemCondition: 'https://schema.org/NewCondition',
       seller: {
         '@type': 'AutomotiveBusiness',
         name: site.name,

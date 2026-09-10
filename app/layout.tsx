@@ -81,12 +81,12 @@ export default function RootLayout({ children }: Readonly<{children: React.React
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Catálogo de Baterias Veiculares',
+      name: 'Catálogo de Serviços de Baterias',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Bateria Moura em Salvador' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Bateria Heliar em Salvador' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Bateria Zetta em Salvador' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Bateria Start-Stop EFB e AGM em Salvador' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Moura em Salvador' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Heliar em Salvador' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Zetta em Salvador' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Start-Stop EFB e AGM em Salvador' } },
       ],
     },
     sameAs: ['https://www.instagram.com/minha_bateria/', 'https://www.facebook.com/minhabateria', site.maps],
