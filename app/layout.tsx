@@ -11,11 +11,19 @@ const GTM_ID = 'GTM-WVJKDH2W';
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: 'Bateria Salvador | Disk Bateria, Moura e Heliar — Minha Bateria', template: '%s | Minha Bateria Salvador' },
-  description: 'Disk bateria em Salvador com entrega e instalação grátis. Baterias Moura, Heliar e Zetta com teste elétrico no local. Peça seu orçamento pelo WhatsApp.',
+  description: 'Disk Bateria Salvador com entrega rápida e instalação grátis. Bateria Moura, Heliar e Zetta com teste elétrico no local. Peça seu orçamento pelo WhatsApp!',
   robots: { index: indexable, follow: true },
   openGraph: social,
   twitter: { card: 'summary_large_image', images: ['/images/compartilhar.webp'] },
-  icons: { icon: '/images/icon.png', apple: '/images/icon.png' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/icon.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: [
+      { url: '/images/icon.png', sizes: '180x180' },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
