@@ -7,7 +7,7 @@ import { site, social } from '../../site';
 
 
 export const metadata: Metadata = {
-  title: 'Carro Não Pega e Faz Barulho de Estalo: É Bateria ou Motor de Arranque?',
+  title: 'Carro Não Pega e Faz Estalos: É Bateria ou Arranque?',
   description: 'Ouviu barulho de "tec tec" ao dar a partida no carro? Saiba a diferença entre bateria fraca e defeito no motor de arranque. Atendimento ágil em Salvador.',
   alternates: { canonical: '/duvidas/carro-nao-pega-estalos-bateria-ou-arranque/' },
   openGraph: {
@@ -78,7 +78,7 @@ export default function EstaloPartidaPage() {
           <span className="badge-tag">Diagnóstico Automotivo</span>
         </div>
 
-        <h1>Carro Não Pega e Faz Barulho de Estalo: É Bateria ou Motor de Arranque?</h1>
+        <h1>Carro Não Pega e Faz Estalos: É Bateria ou Motor de Arranque?</h1>
 
         {/* Bloco de Resposta Direta (GEO) */}
         <div className="direct-answer-box">

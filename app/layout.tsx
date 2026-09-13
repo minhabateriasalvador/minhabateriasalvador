@@ -10,7 +10,7 @@ const GTM_ID = 'GTM-WVJKDH2W';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: 'Bateria Salvador | Disk Bateria, Moura e Heliar — Minha Bateria', template: '%s | Minha Bateria Salvador' },
+  title: { default: 'Bateria Salvador | Disk Bateria Moura, Heliar e Zetta', template: '%s' },
   description: 'Disk Bateria Salvador com entrega rápida e instalação grátis. Bateria Moura, Heliar e Zetta com teste elétrico no local. Peça seu orçamento pelo WhatsApp!',
   robots: { index: indexable, follow: true },
   openGraph: social,

@@ -7,7 +7,7 @@ import { site, social } from '../../site';
 
 
 export const metadata: Metadata = {
-  title: 'Posso Colocar Bateria Comum em Carro com Sistema Start-Stop?',
+  title: 'Bateria Comum em Carro Start-Stop: Riscos e Cuidados',
   description: 'Descubra o que acontece ao instalar uma bateria convencional em veículo com Start-Stop. Riscos de danos elétricos, pane no alternador e vida útil reduzida.',
   alternates: { canonical: '/duvidas/bateria-comum-em-carro-start-stop/' },
   openGraph: {

@@ -7,7 +7,7 @@ import { site, social } from '../../site';
 
 
 export const metadata: Metadata = {
-  title: 'Bateria Moura ou Heliar: Qual a Melhor Escolha para Salvador?',
+  title: 'Bateria Moura ou Heliar: Qual a Melhor para Salvador?',
   description: 'Comparativo definitivo entre bateria Moura e bateria Heliar: resistência ao calor de Salvador, tecnologia PowerFrame, garantia e valor de revenda.',
   alternates: { canonical: '/duvidas/bateria-moura-ou-heliar-qual-a-melhor/' },
   openGraph: {
