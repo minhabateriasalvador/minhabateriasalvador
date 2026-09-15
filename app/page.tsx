@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ArrowDown, ArrowUpRight, BatteryCharging, Check, Clock3, CreditCard, MapPin, MessageCircle, Phone, ShieldCheck, Truck, Wrench, Zap } from 'lucide-react';
 import { ContactButton, FAQ, NeighborhoodGrid } from './components';
+import { GoogleMapLazy } from './google-map-lazy';
 import { categories, faqs, site, social, whatsapp } from './site';
 
 export const metadata: Metadata = {
@@ -99,7 +100,45 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="local section" id="loja"><div className="container local-grid"><div className="local-photo"><Image src="/images/minha-bateria-loja-salvador.webp" width={576} height={489} sizes="(max-width: 760px) 90vw, 45vw" alt="Loja Minha Bateria no STIEP em Salvador - Revenda Moura, Heliar e Zetta" /><a href={site.maps} className="photo-caption" target="_blank" rel="noopener noreferrer"><MapPin size={20} /><span>Nossa loja no STIEP<strong>Salvador, Bahia</strong></span><ArrowUpRight size={20} /></a></div><div className="local-copy"><p className="eyebrow">DAQUI DE SALVADOR</p><h2>Uma loja perto.<br />Uma equipe do seu lado.</h2><p>Desde 2009, a Minha Bateria atende motoristas e empresas de Salvador. A gente orienta a escolha, confere a necessidade da troca e ajuda você a voltar à rotina.</p><p>Atendemos STIEP, Pituba, Brotas, Barra, Rio Vermelho, Itapuã, Paralela e outras regiões. Informe seu bairro para confirmar a cobertura.</p><div className="local-address"><MapPin size={22} aria-hidden="true" /><address>{site.address}<br />CEP 41770-095</address></div><ContactButton location="local">Consultar meu bairro</ContactButton><a className="review-link" href={site.maps} target="_blank" rel="noopener noreferrer">Conheça as avaliações no Google <ArrowUpRight size={16} /></a></div></div></section>
+    <section className="local section" id="loja">
+      <div className="container">
+        <div className="local-grid">
+          <div className="local-photo">
+            <Image src="/images/minha-bateria-loja-salvador.webp" width={576} height={489} sizes="(max-width: 760px) 90vw, 45vw" alt="Loja Minha Bateria no STIEP em Salvador - Revenda Moura, Heliar e Zetta" />
+            <a href={site.maps} className="photo-caption" target="_blank" rel="noopener noreferrer">
+              <MapPin size={20} />
+              <span>Nossa loja no STIEP<strong>Salvador, Bahia</strong></span>
+              <ArrowUpRight size={20} />
+            </a>
+          </div>
+          <div className="local-copy">
+            <p className="eyebrow">DAQUI DE SALVADOR</p>
+            <h2>Uma loja perto.<br />Uma equipe do seu lado.</h2>
+            <p>Desde 2009, a Minha Bateria atende motoristas e empresas de Salvador. A gente orienta a escolha, confere a necessidade da troca e ajuda você a voltar à rotina.</p>
+            <p>Atendemos STIEP, Pituba, Brotas, Barra, Rio Vermelho, Itapuã, Paralela e outras regiões. Informe seu bairro para confirmar a cobertura.</p>
+            <div className="local-address">
+              <MapPin size={22} aria-hidden="true" />
+              <address>{site.address}<br />CEP 41770-095</address>
+            </div>
+            <ContactButton location="local">Consultar meu bairro</ContactButton>
+            <a className="review-link" href={site.maps} target="_blank" rel="noopener noreferrer">Conheça as avaliações no Google <ArrowUpRight size={16} /></a>
+          </div>
+        </div>
+
+        <div className="local-map-section">
+          <div className="local-map-header">
+            <div>
+              <p className="eyebrow" style={{ color: 'var(--yellow)', marginBottom: '8px' }}>LOCALIZAÇÃO NO MAPA</p>
+              <h3 style={{ color: '#fff', fontSize: '1.4rem' }}>Venha conhecer nossa loja física no STIEP</h3>
+            </div>
+            <a href={site.maps} target="_blank" rel="noopener noreferrer" className="map-route-btn">
+              <MapPin size={17} /> Abrir Rota no Google Maps <ArrowUpRight size={15} />
+            </a>
+          </div>
+          <GoogleMapLazy height={380} theme="dark" title="Mapa da Loja Minha Bateria no STIEP Salvador" />
+        </div>
+      </div>
+    </section>
 
     <section className="section" style={{ background: 'var(--surface)', paddingTop: '40px', paddingBottom: '40px', borderTop: '1px solid var(--line)' }}>
       <div className="container">
