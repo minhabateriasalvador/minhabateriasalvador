@@ -20,7 +20,7 @@ export const social = {
 };
 
 export const whatsapp = (subject = 'uma bateria') =>
-  `https://wa.me/${site.phone}?text=${encodeURIComponent(`Olá! Vim pelo site Minha Bateria Salvador e gostaria de um orçamento de ${subject}. Meu veículo (modelo e ano):\nMeu bairro:`)}`;
+  `https://wa.me/${site.phone}?text=${encodeURIComponent(`Olá! Vim pelo site Minha Bateria Salvador e gostaria de um orçamento de ${subject}.`)}`;
 
 export const categories = [
   { name: 'Bateria para carro', image: 'bateria-carro.webp', alt: 'Carro branco e bateria Moura', description: 'Para carros de passeio e SUVs. Informe modelo e ano para encontrarmos a capacidade e o encaixe corretos.', capacities: ['45 Ah', '60 Ah', '70 Ah', '90 Ah'], brands: ['Moura', 'Zetta', 'Heliar'], subject: 'bateria para carro' },
