@@ -87,16 +87,6 @@ export default function RootLayout({ children }: Readonly<{children: React.React
       { '@type': 'City', name: 'Lauro de Freitas' },
       ...neighborhoods.map((n) => ({ '@type': 'AdministrativeArea', name: `${n}, Salvador` }))
     ],
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Catálogo de Serviços de Baterias',
-      itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Moura em Salvador' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Heliar em Salvador' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Zetta em Salvador' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entrega e Instalação de Bateria Start-Stop EFB e AGM em Salvador' } },
-      ],
-    },
     sameAs: ['https://www.instagram.com/minha_bateria/', 'https://www.facebook.com/minhabateria', site.maps],
   };
 

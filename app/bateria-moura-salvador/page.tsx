@@ -59,9 +59,9 @@ export default function MouraPage() {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'BRL',
-      lowPrice: '389.00',
-      highPrice: '980.00',
-      offerCount: '6',
+      lowPrice: 389,
+      highPrice: 980,
+      offerCount: 6,
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',

@@ -59,9 +59,9 @@ export default function StartStopPage() {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'BRL',
-      lowPrice: '690.00',
-      highPrice: '1590.00',
-      offerCount: '6',
+      lowPrice: 690,
+      highPrice: 1590,
+      offerCount: 6,
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',

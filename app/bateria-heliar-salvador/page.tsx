@@ -59,9 +59,9 @@ export default function HeliarPage() {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'BRL',
-      lowPrice: '379.00',
-      highPrice: '950.00',
-      offerCount: '6',
+      lowPrice: 379,
+      highPrice: 950,
+      offerCount: 6,
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
