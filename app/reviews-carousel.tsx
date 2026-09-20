@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Star, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 import { site, testimonials } from './site';
@@ -24,54 +24,76 @@ export function VerifiedBadgeIcon({ size = 16 }: { size?: number }) {
 }
 
 export function ReviewsSection() {
+  const count = testimonials.length; // 6
+  // 4 conjuntos para looping contínuo infinito sem nunca voltar para trás
+  const repeatedList = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
+
+  const [currentIndex, setCurrentIndex] = useState(count); // começa no bloco 2
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [step, setStep] = useState(372); // largura do card + gap
   const trackRef = useRef<HTMLDivElement>(null);
-  
-  // Lista duplicada para suportar fluxo contínuo infinito
-  const infiniteList = [...testimonials, ...testimonials, ...testimonials];
+  const touchStartX = useRef<number | null>(null);
 
-  const getStep = () => {
-    if (!trackRef.current) return 340;
-    const firstCard = trackRef.current.querySelector<HTMLElement>('.review-carousel-card');
-    if (firstCard) {
-      const style = window.getComputedStyle(trackRef.current);
-      const gap = parseFloat(style.columnGap || style.gap) || 22;
-      return firstCard.offsetWidth + gap;
-    }
-    return 340;
-  };
-
-  const handleScroll = () => {
-    const el = trackRef.current;
-    if (!el) return;
-    const oneSetWidth = el.scrollWidth / 3;
-    // Se avançar além do segundo set, ajusta de volta para o primeiro set sem animação
-    if (el.scrollLeft >= oneSetWidth * 2) {
-      el.scrollLeft -= oneSetWidth;
-    } else if (el.scrollLeft <= 5) {
-      el.scrollLeft += oneSetWidth;
-    }
-  };
-
-  useEffect(() => {
-    const el = trackRef.current;
-    if (el) {
-      // Começa no início do segundo set
-      const oneSetWidth = el.scrollWidth / 3;
-      el.scrollLeft = oneSetWidth;
+  // Calcula a largura exata de cada card + gap
+  const updateStep = useCallback(() => {
+    if (trackRef.current) {
+      const card = trackRef.current.querySelector<HTMLElement>('.review-carousel-card');
+      if (card) {
+        const style = window.getComputedStyle(trackRef.current);
+        const gap = parseFloat(style.columnGap || style.gap) || 22;
+        setStep(card.offsetWidth + gap);
+      }
     }
   }, []);
 
-  const scrollNext = () => {
-    if (!trackRef.current) return;
-    const step = getStep();
-    trackRef.current.scrollBy({ left: step, behavior: 'smooth' });
+  useEffect(() => {
+    updateStep();
+    window.addEventListener('resize', updateStep);
+    return () => window.removeEventListener('resize', updateStep);
+  }, [updateStep]);
+
+  // Avançar (sempre contínuo no mesmo sentido)
+  const handleNext = () => {
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev + 1);
   };
 
-  const scrollPrev = () => {
-    if (!trackRef.current) return;
-    const step = getStep();
-    trackRef.current.scrollBy({ left: -step, behavior: 'smooth' });
+  // Voltar
+  const handlePrev = () => {
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev - 1);
   };
+
+  // Quando a animação de deslize termina, reposiciona silenciosamente sem transição
+  const handleTransitionEnd = () => {
+    // Se avançou além do segundo conjunto completo, recua 1 bloco de forma invisível
+    if (currentIndex >= count * 2) {
+      setIsTransitioning(false);
+      setCurrentIndex((prev) => prev - count);
+    } else if (currentIndex < count) {
+      setIsTransitioning(false);
+      setCurrentIndex((prev) => prev + count);
+    }
+  };
+
+  // Suporte a gestos touch em mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchEndX - touchStartX.current;
+    if (diff < -40) {
+      handleNext();
+    } else if (diff > 40) {
+      handlePrev();
+    }
+    touchStartX.current = null;
+  };
+
+  const offset = currentIndex * step;
 
   return (
     <section className="reviews-section" id="avaliacoes">
@@ -122,14 +144,24 @@ export function ReviewsSection() {
           </div>
         </div>
 
-        {/* Carrossel de Fluxo Contínuo */}
-        <div className="reviews-carousel-wrapper">
+        {/* Carrossel de Fluxo Contínuo Infinito */}
+        <div
+          className="reviews-carousel-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
             className="reviews-carousel-track"
             ref={trackRef}
-            onScroll={handleScroll}
+            onTransitionEnd={handleTransitionEnd}
+            style={{
+              transform: `translate3d(-${offset}px, 0, 0)`,
+              transition: isTransitioning
+                ? 'transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1)'
+                : 'none',
+            }}
           >
-            {infiniteList.map((t, idx) => (
+            {repeatedList.map((t, idx) => (
               <article className="review-carousel-card" key={idx}>
                 <div>
                   <div className="review-card-top">
@@ -167,7 +199,7 @@ export function ReviewsSection() {
             <button
               type="button"
               className="carousel-btn"
-              onClick={scrollPrev}
+              onClick={handlePrev}
               aria-label="Ver avaliação anterior"
               title="Avaliação anterior"
             >
@@ -177,7 +209,7 @@ export function ReviewsSection() {
             <button
               type="button"
               className="carousel-btn"
-              onClick={scrollNext}
+              onClick={handleNext}
               aria-label="Ver próxima avaliação"
               title="Próxima avaliação"
             >
