@@ -7,6 +7,7 @@ export const site = {
   address: 'Rua Arthur Fraga, 218, Loja 01 — STIEP, Salvador — BA',
   maps: 'https://maps.google.com/maps?cid=15088412402514049413',
   reviews: 'https://g.page/r/CYW5cmQjz2TREBM/review',
+  googleSearch: 'https://www.google.com/search?q=Minha+Bateria+Salvador',
   reviewsCount: 275,
   ratingValue: '4.9',
 };

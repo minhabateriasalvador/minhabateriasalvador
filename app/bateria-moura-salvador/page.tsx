@@ -66,7 +66,7 @@ export default function MouraPage() {
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: {
-        '@type': 'AutomotiveBusiness',
+        '@type': ['LocalBusiness', 'AutoPartsStore', 'AutomotiveBusiness'],
         name: site.name,
         telephone: `+${site.phone}`,
         address: site.address,

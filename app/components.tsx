@@ -219,15 +219,27 @@ export function ReviewsSection() {
               <span>Com base em {site.reviewsCount} avaliações reais no Google Maps</span>
             </div>
           </div>
-          <a
-            href={site.reviews}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="reviews-google-badge"
-          >
-            <span>Ver avaliações no Google</span>
-            <ArrowUpRight size={18} />
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+            <a
+              href={site.googleSearch}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reviews-google-badge"
+              title="Visualizar o perfil da Minha Bateria e todas as avaliações no Google"
+            >
+              <span>Visualizar avaliações no Google</span>
+              <ArrowUpRight size={18} />
+            </a>
+            <a
+              href={site.reviews}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: '0.85rem', color: 'var(--blue)', fontWeight: 700, textDecoration: 'underline' }}
+              title="Deixar sua avaliação no Google"
+            >
+              Avaliar no Google
+            </a>
+          </div>
         </div>
 
         <div className="reviews-cards-grid">

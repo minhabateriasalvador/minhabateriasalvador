@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'AutomotiveBusiness',
+    '@type': ['LocalBusiness', 'AutoPartsStore', 'AutomotiveBusiness'],
     '@id': `${site.url}/#loja`,
     name: site.name,
     url: site.url,

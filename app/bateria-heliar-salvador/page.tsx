@@ -66,7 +66,7 @@ export default function HeliarPage() {
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: {
-        '@type': 'AutomotiveBusiness',
+        '@type': ['LocalBusiness', 'AutoPartsStore', 'AutomotiveBusiness'],
         name: site.name,
         telephone: `+${site.phone}`,
         address: site.address,
