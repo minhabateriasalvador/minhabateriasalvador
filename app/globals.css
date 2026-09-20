@@ -381,5 +381,146 @@
   }
 }
 
+/* Seção de Prova Social e Avaliações Reais */
+.reviews-section {
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+  padding: 80px 0;
+}
+.reviews-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 40px;
+}
+.reviews-score-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.reviews-big-number {
+  font-size: 3rem;
+  font-weight: 850;
+  line-height: 1;
+  color: var(--navy);
+  letter-spacing: -0.04em;
+}
+.reviews-score-info strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.reviews-score-info span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.stars-row {
+  display: inline-flex;
+  gap: 4px;
+  color: #f59e0b;
+}
+.reviews-google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #d4e0ee;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  box-shadow: 0 2px 10px #041d430a;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.reviews-google-badge:hover {
+  border-color: var(--blue);
+  transform: translateY(-2px);
+}
+.reviews-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.review-card-item {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px #041d4306;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.review-card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px #075daf12;
+}
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.review-badge-verified {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #eef7ee;
+  color: #1b8a36;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.review-card-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink);
+  font-style: normal;
+  margin-bottom: 18px;
+  flex: 1;
+}
+.review-card-author strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+.review-card-author span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.review-vehicle-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: #f0f6fc;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
 
-
+@media (max-width: 1050px) {
+  .reviews-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .reviews-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-summary-bar {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

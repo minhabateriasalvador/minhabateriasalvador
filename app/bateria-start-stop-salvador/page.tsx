@@ -51,8 +51,8 @@ export default function StartStopPage() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '184',
+      ratingValue: site.ratingValue,
+      reviewCount: String(site.reviewsCount),
       bestRating: '5',
       worstRating: '1',
     },
@@ -111,7 +111,7 @@ export default function StartStopPage() {
         <div className="direct-answer-box">
           <span className="direct-answer-title">Onde Trocar Bateria Start-Stop (EFB / AGM) em Salvador com Segurança?</span>
           <p>
-            A <strong>Minha Bateria Salvador</strong> é especializada em troca técnica de baterias Start-Stop <strong>EFB e AGM</strong> das marcas Moura e Heliar. Realizamos o procedimento com equipamento auxiliar de alimentação para evitar desconfiguração do computador de bordo, rádio e sensores dos veículos mais modernos em Salvador e Lauro de Freitas.
+            A <strong>Minha Bateria Salvador</strong> é especializada em troca técnica de baterias Start-Stop <strong>EFB e AGM</strong> das marcas Moura e Heliar. Realizamos o procedimento com equipamento auxiliar de alimentação para evitar desconfiguração do computador de bordo, rádio e sensores dos veículos mais modernos em Salvador.
           </p>
         </div>
 

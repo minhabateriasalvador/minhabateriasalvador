@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { ArrowUpRight, Menu, Phone, MapPin, ChevronDown, ShieldCheck, Truck, Zap, Clock3, Wrench } from 'lucide-react';
-import { site, whatsapp, neighborhoods } from './site';
+import { ArrowUpRight, Menu, Phone, MapPin, ChevronDown, ShieldCheck, Truck, Zap, Clock3, Wrench, Star } from 'lucide-react';
+import { site, whatsapp, neighborhoods, testimonials } from './site';
 
 export function WhatsAppIcon({ size = 20 }: { size?: number }) {
   return <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" focusable="false" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.14 19.7L3 29l6.47-1.78A13 13 0 1 0 16 3Zm0 23.7c-2.08 0-4.12-.56-5.9-1.62l-.42-.25-3.84 1.06 1.03-3.74-.28-.43A10.7 10.7 0 1 1 16 26.7Zm5.87-8.03c-.32-.16-1.9-.94-2.2-1.05-.29-.1-.5-.16-.71.16-.21.32-.81 1.05-.99 1.26-.18.21-.36.24-.68.08-1.87-.94-3.1-1.68-4.33-3.8-.33-.57.33-.53.94-1.77.11-.21.05-.4-.03-.56-.08-.16-.71-1.7-.97-2.33-.26-.62-.53-.54-.71-.55h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.22 3.39 5.37 4.76.75.32 1.34.51 1.8.65.76.24 1.45.21 2 .13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z" /></svg>;
@@ -66,9 +66,9 @@ export function Footer() {
       <a href={`tel:+${site.phone}`} data-contact="phone" data-location="footer">{site.phoneDisplay}</a>
       <a href={`mailto:${site.email}`}>{site.email}</a>
       <address>{site.address}<br />CEP 41770-095</address>
-      <p style={{ marginTop: '12px', fontSize: '0.8rem', color: '#8fa8cb' }}>Atendimento em domicílio em todos os bairros de Salvador e Lauro de Freitas.</p>
+      <p style={{ marginTop: '12px', fontSize: '0.8rem', color: '#8fa8cb' }}>Atendimento ágil em domicílio nos principais bairros de Salvador — BA.</p>
     </div>
-  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Minha Bateria Salvador. CNPJ e operação local no STIEP.</span><a href="/politicas-de-privacidade/">Política de privacidade</a></div></footer>;
+  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Minha Bateria Salvador. Operação local e loja física no STIEP.</span><a href="/politicas-de-privacidade/">Política de privacidade</a></div></footer>;
 }
 
 export { MobileContact } from './mobile-contact';
@@ -191,6 +191,69 @@ export function NeighborhoodGrid() {
         ))}
       </div>
     </div>
+  );
+}
+
+export function ReviewsSection() {
+  return (
+    <section className="reviews-section" id="avaliacoes">
+      <div className="container">
+        <div className="section-heading split-heading">
+          <div>
+            <p className="eyebrow blue">REPUTAÇÃO COMPROVADA</p>
+            <h2>Quem precisou de bateria em Salvador, recomenda.</h2>
+          </div>
+          <p>Desde 2009 com atendimento transparente em Salvador, teste elétrico com equipamento de precisão antes de trocar e garantia oficial de fábrica.</p>
+        </div>
+
+        <div className="reviews-summary-bar">
+          <div className="reviews-score-box">
+            <span className="reviews-big-number">{site.ratingValue}</span>
+            <div className="reviews-score-info">
+              <div className="stars-row">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="#f59e0b" color="#f59e0b" />
+                ))}
+              </div>
+              <strong>Classificação Excelente</strong>
+              <span>Com base em {site.reviewsCount} avaliações reais no Google Maps</span>
+            </div>
+          </div>
+          <a
+            href={site.reviews}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="reviews-google-badge"
+          >
+            <span>Ver avaliações no Google</span>
+            <ArrowUpRight size={18} />
+          </a>
+        </div>
+
+        <div className="reviews-cards-grid">
+          {testimonials.map((t, idx) => (
+            <article className="review-card-item" key={idx}>
+              <div>
+                <div className="review-card-top">
+                  <div className="stars-row">
+                    {[...Array(t.rating)].map((_, i) => (
+                      <Star key={i} size={15} fill="#f59e0b" color="#f59e0b" />
+                    ))}
+                  </div>
+                  <span className="review-badge-verified">Verificada</span>
+                </div>
+                <p className="review-card-text">"{t.text}"</p>
+              </div>
+              <div className="review-card-author">
+                <strong>{t.name}</strong>
+                <span>{t.neighborhood}</span>
+                <span className="review-vehicle-tag">{t.vehicle}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

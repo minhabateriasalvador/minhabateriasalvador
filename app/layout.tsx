@@ -57,8 +57,8 @@ export default function RootLayout({ children }: Readonly<{children: React.React
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '184',
+      ratingValue: site.ratingValue,
+      reviewCount: String(site.reviewsCount),
       bestRating: '5',
       worstRating: '1',
     },
@@ -84,7 +84,6 @@ export default function RootLayout({ children }: Readonly<{children: React.React
     geo: { '@type': 'GeoCoordinates', latitude: -12.979917945766873, longitude: -38.448119888281624 },
     areaServed: [
       { '@type': 'City', name: 'Salvador' },
-      { '@type': 'City', name: 'Lauro de Freitas' },
       ...neighborhoods.map((n) => ({ '@type': 'AdministrativeArea', name: `${n}, Salvador` }))
     ],
     sameAs: ['https://www.instagram.com/minha_bateria/', 'https://www.facebook.com/minhabateria', site.maps],

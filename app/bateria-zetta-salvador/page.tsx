@@ -50,8 +50,8 @@ export default function ZettaPage() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '184',
+      ratingValue: site.ratingValue,
+      reviewCount: String(site.reviewsCount),
       bestRating: '5',
       worstRating: '1',
     },

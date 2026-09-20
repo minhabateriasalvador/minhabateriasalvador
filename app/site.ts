@@ -7,6 +7,8 @@ export const site = {
   address: 'Rua Arthur Fraga, 218, Loja 01 — STIEP, Salvador — BA',
   maps: 'https://maps.google.com/maps?cid=15088412402514049413',
   reviews: 'https://g.page/r/CYW5cmQjz2TREBM/review',
+  reviewsCount: 275,
+  ratingValue: '4.9',
 };
 
 // Site liberado e indexavel oficialmente para producao e Google Search Console
@@ -29,6 +31,41 @@ export const categories = [
   { name: 'Bateria Start-Stop', image: 'bateria-start-stop.webp', alt: 'Carro com sistema Start-Stop e bateria Moura', description: 'Tecnologias EFB e AGM para veículos Start-Stop. A escolha considera a especificação original do fabricante.', capacities: ['60 Ah', '70 Ah', '72 Ah', '90 Ah'], brands: ['Moura', 'Heliar', 'Kondor'], subject: 'bateria Start-Stop EFB ou AGM' },
 ];
 
+export const testimonials = [
+  {
+    name: 'Carlos Eduardo Santos',
+    neighborhood: 'Pituba, Salvador',
+    rating: 5,
+    vehicle: 'Toyota Corolla',
+    text: 'Fiquei na mão na garagem do condomínio logo cedo. Chamei no WhatsApp e o técnico veio direto da loja do STIEP. Testou alternador e instalou a Moura 60Ah na hora. Atendimento rápido e impecável!',
+    date: 'Avaliação verificada no Google Maps',
+  },
+  {
+    name: 'Mariana Cerqueira',
+    neighborhood: 'Caminho das Árvores, Salvador',
+    rating: 5,
+    vehicle: 'Jeep Renegade (Start-Stop)',
+    text: 'Meu carro exige bateria especial EFB. A equipe foi super cuidadosa, usou backup elétrico para não desprogramar o painel e o preço foi o melhor de Salvador. Recomendo muito!',
+    date: 'Avaliação verificada no Google Maps',
+  },
+  {
+    name: 'Rafael Guimarães',
+    neighborhood: 'Armação / STIEP, Salvador',
+    rating: 5,
+    vehicle: 'Hyundai HB20',
+    text: 'Preço honesto, bateria original com nota e garantia de fábrica. Pegaram a minha bateria usada na troca com desconto imediato. Excelente revenda.',
+    date: 'Avaliação verificada no Google Maps',
+  },
+  {
+    name: 'Luciana Pinheiro',
+    neighborhood: 'Brotas, Salvador',
+    rating: 5,
+    vehicle: 'Honda Fit',
+    text: 'Socorro ágil de verdade. O técnico testou a bateria e o arranque antes de trocar para garantir que o problema era realmente a bateria. Muita transparência e respeito ao cliente.',
+    date: 'Avaliação verificada no Google Maps',
+  },
+];
+
 export const faqs = [
   { question: 'Disk Baterias Salvador: como fazer meu pedido?', answer: 'Chame a Minha Bateria pelo WhatsApp ou ligue para (71) 99315-1471. Envie o modelo e o ano do veículo, seu bairro e, se possível, uma foto da bateria atual. A equipe confirma a bateria indicada, o valor e a previsão de atendimento antes de combinar a entrega.' },
   { question: 'A entrega e a instalação da bateria são grátis?', answer: 'Oferecemos entrega e instalação gratuitas em Salvador. Informe seu endereço para confirmar a cobertura e a previsão de chegada. O prazo depende do bairro, do trânsito e da disponibilidade da equipe e do produto.' },
@@ -42,7 +79,7 @@ export const neighborhoods = [
   'STIEP', 'Pituba', 'Itaigara', 'Brotas', 'Caminho das Árvores', 'Costa Azul',
   'Armação', 'Boca do Rio', 'Imbuí', 'Patamares', 'Piatã', 'Itapuã',
   'Barra', 'Graça', 'Vitória', 'Ondina', 'Rio Vermelho', 'Cabula',
-  'Horto Florestal', 'Paralela', 'Stella Maris', 'Lauro de Freitas'
+  'Horto Florestal', 'Paralela', 'Stella Maris'
 ];
 
 export const brandPages = {
@@ -53,7 +90,7 @@ export const brandPages = {
     title: 'Bateria Moura Salvador | Entrega e Instalação Grátis',
     description: 'Bateria Moura Salvador com entrega rápida e instalação grátis. Bateria para carros e Start-Stop com até 24 meses de garantia. Peça pelo WhatsApp!',
     heroTitle: 'Bateria Moura Salvador com entrega e instalação grátis.',
-    heroSummary: 'A Minha Bateria Salvador é revenda de baterias Moura com atendimento ágil em todos os bairros de Salvador e Lauro de Freitas. Levamos até você com teste elétrico no local e condições especiais à base de troca.',
+    heroSummary: 'A Minha Bateria Salvador é revenda oficial de baterias Moura com atendimento ágil em Salvador e saída rápida da nossa loja no STIEP. Levamos até você com teste elétrico no local e condições especiais à base de troca.',
     warranty: 'Até 24 meses de garantia oficial de fábrica com assistência nacional',
     badge: 'LÍDER EM CONFIANÇA',
     models: [

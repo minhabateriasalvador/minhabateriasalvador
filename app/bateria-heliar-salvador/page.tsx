@@ -51,8 +51,8 @@ export default function HeliarPage() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '184',
+      ratingValue: site.ratingValue,
+      reviewCount: String(site.reviewsCount),
       bestRating: '5',
       worstRating: '1',
     },
@@ -111,7 +111,7 @@ export default function HeliarPage() {
         <div className="direct-answer-box">
           <span className="direct-answer-title">Onde Encontrar Bateria Heliar em Salvador com Instalação Gratuita?</span>
           <p>
-            A <strong>Minha Bateria Salvador</strong> entrega e instala baterias Heliar com tecnologia PowerFrame em toda a região de Salvador e Lauro de Freitas. Modelos convencionais (50Ah, 60Ah, 75Ah) e linhas especiais EFB/AGM com 24 meses de garantia e assistência de socorro 24 horas.
+            A <strong>Minha Bateria Salvador</strong> entrega e instala baterias Heliar com tecnologia PowerFrame nos principais bairros de Salvador, com atendimento ágil a partir da loja no STIEP. Modelos convencionais (50Ah, 60Ah, 75Ah) e linhas especiais EFB/AGM com 24 meses de garantia e assistência de socorro 24 horas.
           </p>
         </div>
 

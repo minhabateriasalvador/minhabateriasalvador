@@ -51,8 +51,8 @@ export default function MouraPage() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '184',
+      ratingValue: site.ratingValue,
+      reviewCount: String(site.reviewsCount),
       bestRating: '5',
       worstRating: '1',
     },
@@ -111,7 +111,7 @@ export default function MouraPage() {
         <div className="direct-answer-box">
           <span className="direct-answer-title">Onde Comprar Bateria Moura em Salvador com Entrega Rápida?</span>
           <p>
-            A <strong>Minha Bateria Salvador</strong> fornece a linha completa de baterias Moura (48Ah, 60Ah, 70Ah, 75Ah, EFB e AGM) com entrega e instalação gratuitas no seu endereço em até 40 minutos em Salvador e Lauro de Freitas. Pagamento facilitado à base de troca com teste prévio do sistema elétrico.
+            A <strong>Minha Bateria Salvador</strong> fornece a linha completa de baterias Moura (48Ah, 60Ah, 70Ah, 75Ah, EFB e AGM) com entrega e instalação gratuitas no seu endereço, com envio ágil para os principais bairros de Salvador a partir da loja no STIEP. Pagamento facilitado à base de troca com teste prévio do sistema elétrico.
           </p>
         </div>
 

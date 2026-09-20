@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ArrowDown, ArrowUpRight, BatteryCharging, Check, Clock3, CreditCard, MapPin, MessageCircle, Phone, ShieldCheck, Truck, Wrench, Zap } from 'lucide-react';
-import { ContactButton, FAQ, NeighborhoodGrid } from './components';
+import { ContactButton, FAQ, NeighborhoodGrid, ReviewsSection } from './components';
 import { GoogleMapLazy } from './google-map-lazy';
 import { categories, faqs, site, social, whatsapp } from './site';
 
@@ -37,7 +37,7 @@ export default function Home() {
       <h1>Bateria Salvador:<br />entrega rápida e<br /><span>instalação grátis.</span></h1>
       <p className="hero-description">Seu carro não liga? O Disk Bateria Salvador leva a bateria certa até você, com teste elétrico no local e garantia oficial de fábrica.</p>
       <div className="hero-actions"><ContactButton location="hero">Pedir minha bateria</ContactButton><a className="phone-link" href={`tel:+${site.phone}`} data-contact="phone" data-location="hero"><Phone size={20} aria-hidden="true" /><span><small>Prefere ligar?</small>{site.phoneDisplay}</span></a></div>
-      <p className="hero-note"><Check size={15} aria-hidden="true" /> Informe seu veículo e bairro. Nós cuidamos do resto.</p>
+      <p className="hero-note"><Check size={15} aria-hidden="true" /> Nota {site.ratingValue} no Google ({site.reviewsCount}+ avaliações) • Atendimento ágil em Salvador</p>
     </div><div className="hero-visual"><Image className="hero-image" src="/images/bateria-moura-salvador-herov2.webp" width={547} height={407} sizes="(max-width: 760px) 95vw, 52vw" priority alt="Disk Bateria Salvador - Bateria Moura com entrega e instalação grátis em Salvador" /><div className="hero-service"><span className="icon-box"><ShieldCheck size={24} /></span><div><strong>Da nossa loja até você.</strong><span>Atendimento local em Salvador</span></div><ArrowUpRight size={22} /></div></div></div>
       <div className="container hero-bottom">
         <span>
@@ -99,6 +99,8 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    <ReviewsSection />
 
     <section className="local section" id="loja">
       <div className="container">
