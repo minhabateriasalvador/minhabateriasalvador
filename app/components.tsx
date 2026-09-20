@@ -221,11 +221,11 @@ export function ReviewsSection() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
             <a
-              href={site.googleSearch}
+              href={site.googleReviewsPopup}
               target="_blank"
               rel="noopener noreferrer"
               className="reviews-google-badge"
-              title="Visualizar o perfil da Minha Bateria e todas as avaliações no Google"
+              title="Abrir as avaliações reais da Minha Bateria no Google"
             >
               <span>Visualizar avaliações no Google</span>
               <ArrowUpRight size={18} />
@@ -252,14 +252,22 @@ export function ReviewsSection() {
                       <Star key={i} size={15} fill="#f59e0b" color="#f59e0b" />
                     ))}
                   </div>
-                  <span className="review-badge-verified">Verificada</span>
+                  <span className="review-badge-verified">Google Reviews</span>
                 </div>
                 <p className="review-card-text">"{t.text}"</p>
               </div>
-              <div className="review-card-author">
-                <strong>{t.name}</strong>
-                <span>{t.neighborhood}</span>
-                <span className="review-vehicle-tag">{t.vehicle}</span>
+              <div className="review-card-user">
+                <Image
+                  src={t.avatar}
+                  alt={`Foto de perfil de ${t.name} no Google`}
+                  width={44}
+                  height={44}
+                  className="review-avatar-img"
+                />
+                <div className="review-card-author">
+                  <strong>{t.name}</strong>
+                  <span>{t.badge} • <small>{t.time}</small></span>
+                </div>
               </div>
             </article>
           ))}

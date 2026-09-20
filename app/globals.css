@@ -487,26 +487,40 @@
   margin-bottom: 18px;
   flex: 1;
 }
+.review-card-user {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 14px;
+}
+.review-avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d4e3f5;
+  box-shadow: 0 2px 6px #041d4310;
+  flex-shrink: 0;
+}
+.review-card-author {
+  flex: 1;
+  min-width: 0;
+}
 .review-card-author strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .review-card-author span {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--muted);
   margin-top: 2px;
-}
-.review-vehicle-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--blue);
-  background: #f0f6fc;
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-top: 6px;
 }
 
 @media (max-width: 1050px) {
