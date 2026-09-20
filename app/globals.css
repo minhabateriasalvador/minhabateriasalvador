@@ -479,6 +479,21 @@
   padding: 3px 8px;
   border-radius: 5px;
 }
+.review-badge-verified-blue {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0b66c3;
+  background: #edf5fd;
+  border: 1px solid #c9e0f9;
+  padding: 4px 9px;
+  border-radius: 6px;
+}
+.review-badge-verified-blue svg {
+  flex-shrink: 0;
+}
 .review-card-text {
   font-size: 0.92rem;
   line-height: 1.6;
@@ -496,8 +511,8 @@
   margin-top: 14px;
 }
 .review-avatar-img {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #d4e3f5;
@@ -523,6 +538,82 @@
   margin-top: 2px;
 }
 
+/* Carrossel de Avaliações */
+.reviews-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+.reviews-carousel-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-block: 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.reviews-carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+.review-carousel-card {
+  flex: 0 0 340px;
+  width: 340px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px #041d4306;
+  scroll-snap-align: start;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.review-carousel-card:hover {
+  transform: translateY(-3px);
+  border-color: #bad3ef;
+  box-shadow: 0 10px 24px #075daf14;
+}
+
+/* Setas Centralizadas Abaixo */
+.carousel-nav-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 36px;
+}
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #c8d8ec;
+  color: var(--navy);
+  cursor: pointer;
+  box-shadow: 0 3px 12px #041d430e;
+  transition: background 0.16s, border-color 0.16s, transform 0.16s, color 0.16s;
+}
+.carousel-btn:hover {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+  transform: scale(1.08);
+}
+.carousel-btn:active {
+  transform: scale(0.96);
+}
+.carousel-dots-indicator {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  user-select: none;
+}
+
 @media (max-width: 1050px) {
   .reviews-cards-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -536,5 +627,9 @@
     padding: 20px;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .review-carousel-card {
+    flex: 0 0 85vw;
+    width: 85vw;
   }
 }

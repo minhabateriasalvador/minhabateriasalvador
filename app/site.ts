@@ -35,19 +35,19 @@ export const categories = [
 
 export const testimonials = [
   {
+    name: 'Renato Uzel',
+    avatar: '/images/avaliacoes/renato-uzel.webp',
+    badge: 'Cliente Google',
+    rating: 5,
+    text: 'Excelente serviço, liguei pedindo uma bateria nova e chegou em menos de 20min. O técnico Jurandir muito atencioso e educado. Bateria com preço bom, e diversas outras opções de valores também.',
+    time: 'Avaliação no Google',
+  },
+  {
     name: 'Francisco Zeilson Marques Viana Júnior',
     avatar: '/images/avaliacoes/francisco-zeilson.webp',
     badge: 'Local Guide • 18 avaliações',
     rating: 5,
     text: 'Encontrei a Minha Bateria na Internet e fui rapidamente atendido pelo WhatsApp, e também rapidamente já me trouxeram a bateria para substituir. Foi o melhor preço que encontrei e com ótimo atendimento.',
-    time: '4 meses atrás',
-  },
-  {
-    name: 'Leandro Basilio',
-    avatar: '/images/avaliacoes/leandro-basilio.webp',
-    badge: 'Cliente Verificado',
-    rating: 5,
-    text: 'Atendimento muito bom, com rapidez, eficiência e qualidade.',
     time: '4 meses atrás',
   },
   {
@@ -59,11 +59,27 @@ export const testimonials = [
     time: '3 meses atrás',
   },
   {
-    name: 'Alane S.',
-    avatar: '/images/avaliacoes/cliente-google.webp',
-    badge: 'Cliente Verificada',
+    name: 'Elen Shelby',
+    avatar: '/images/avaliacoes/elen-shelby.webp',
+    badge: 'Cliente Google',
     rating: 5,
-    text: 'Gratidão a Michel e ao técnico Alex Jesus abençoe vcs.',
+    text: '👏👏👏👏🙏🏻 Gratidão a Michel e ao técnico Alex Jesus abençoe vcs.',
+    time: 'Avaliação no Google',
+  },
+  {
+    name: 'Tayná Gonzalez',
+    avatar: '/images/avaliacoes/tayna-gonzalez.webp',
+    badge: 'Cliente Google',
+    rating: 5,
+    text: 'Serviço rápido e eficiente! Preço e qualidade! Indico..',
+    time: 'Avaliação no Google',
+  },
+  {
+    name: 'Raquel Magalhães',
+    avatar: '/images/avaliacoes/raquel-magalhaes.webp',
+    badge: 'Cliente Google',
+    rating: 5,
+    text: 'Excelente. Tratamento ótimo. Michel, correspondeu a minha expectativa. Recomendo compra de baterias, com a "Minha Bateria."',
     time: 'Avaliação no Google',
   },
 ];
