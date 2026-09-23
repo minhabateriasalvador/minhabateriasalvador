@@ -627,3 +627,206 @@
     max-width: 360px;
   }
 }
+
+/* Serviços Landing Page */
+.service-hero-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-hero-photo img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px #02132f50;
+  border: 1px solid #ffffff25;
+  object-fit: cover;
+}
+.service-pillars-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.service-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+.service-pillar-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.service-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+  box-shadow: 0 12px 28px #075daf14;
+}
+.service-pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #041d43;
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.service-pillar-card h3 {
+  font-size: 1.22rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.service-pillar-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+}
+.service-feature-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  padding: 60px 0;
+}
+.service-feature-reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.service-feature-image img {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 12px 30px #041d4315;
+  border: 1px solid var(--line);
+  display: block;
+}
+.service-feature-copy h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  color: var(--navy);
+  margin-bottom: 18px;
+}
+.service-feature-copy p {
+  color: #3e5066;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.service-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.service-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 550;
+}
+.service-checklist li svg {
+  color: #0b9e43;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.authority-transfer-box {
+  background: linear-gradient(135deg, #041d43 0%, #08336d 100%);
+  border-radius: 18px;
+  padding: 40px;
+  color: #ffffff;
+  margin: 50px 0;
+  border: 1px solid #1a569c;
+  box-shadow: 0 15px 35px #02132f30;
+}
+.authority-transfer-box h3 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.authority-transfer-box p {
+  color: #c9dbf1;
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+.authority-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.authority-link-card {
+  background: #031530;
+  border: 1px solid #1b4b84;
+  border-radius: 12px;
+  padding: 18px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  transition: transform 0.18s, border-color 0.18s, background 0.18s;
+}
+.authority-link-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--yellow);
+  background: #052048;
+}
+.authority-link-card strong {
+  font-size: 1rem;
+  color: #ffffff;
+  display: block;
+}
+.authority-link-card span {
+  font-size: 0.8rem;
+  color: #9cb5d6;
+  line-height: 1.4;
+}
+.authority-link-card .link-arrow {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .service-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .authority-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .service-feature-split,
+  .service-feature-reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .service-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .authority-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .authority-transfer-box {
+    padding: 26px 20px;
+  }
+}
+
