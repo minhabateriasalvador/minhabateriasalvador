@@ -911,6 +911,8 @@ body:has(.landing-page) > .footer {
 .lp-header-cta {
   padding: 12px 20px !important;
   font-size: 0.9rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 /* Hero LP Ajustes */
@@ -1104,6 +1106,27 @@ body:has(.landing-page) > .footer {
   }
 }
 @media (max-width: 760px) {
+  .lp-header-inner {
+    min-height: 60px;
+    gap: 8px;
+    padding-inline: 12px;
+  }
+  .lp-brand img {
+    height: 38px;
+    width: auto;
+  }
+  .lp-header-cta {
+    padding: 8px 12px !important;
+    font-size: 0.82rem !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0;
+  }
+  .lp-header-cta svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0;
+  }
   .lp-header-phone {
     display: none;
   }
