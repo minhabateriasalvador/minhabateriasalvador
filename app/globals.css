@@ -920,8 +920,9 @@ body:has(.landing-page) > .footer {
   padding-top: 48px;
 }
 .lp-hero-title {
-  font-size: clamp(2.2rem, 3.8vw, 3.6rem);
-  line-height: 1.15;
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.14;
   letter-spacing: -0.035em;
   margin-bottom: 20px;
 }
@@ -1143,9 +1144,10 @@ body:has(.landing-page) > .footer {
     padding-top: 36px;
   }
   .lp-hero-title {
-    font-size: clamp(1.75rem, 6.8vw, 2.25rem) !important;
-    line-height: 1.16 !important;
-    margin-bottom: 16px !important;
+    font-size: clamp(1.95rem, 7.5vw, 2.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 18px !important;
   }
   .desktop-break {
     display: none !important;

@@ -21,7 +21,7 @@ import { LpReviewsCarousel } from './lp-reviews-carousel';
 
 export const metadata: Metadata = {
   title: 'Disk Bateria Salvador | Entrega e Instalação Grátis no Local',
-  description: 'Seu carro não liga? Disk Bateria em Salvador com entrega rápida e instalação grátis. Moura, Heliar e Zetta com teste elétrico no local. Peça pelo WhatsApp!',
+  description: 'Carro não liga? Disk Bateria Salvador com entrega rápida e instalação grátis. Moura, Heliar e Zetta com teste elétrico no local. Peça pelo WhatsApp!',
   robots: {
     index: false, // Página exclusiva para campanhas de tráfego pago (Google Ads)
     follow: false,
@@ -154,12 +154,11 @@ f.parentNode.insertBefore(j,f);
             <div className="hero-copy">
               <p className="eyebrow">
                 <span className="tiny-bolt"><Zap size={14} fill="currentColor" /></span>
-                DISK BATERIA EM SALVADOR • SOCORRO RÁPIDO
+                DISK BATERIA SALVADOR • SOCORRO RÁPIDO
               </p>
               <h1 className="lp-hero-title">
-                Seu carro não liga?<br />
-                Bateria em Salvador<br className="mobile-break" /> com<br className="desktop-break" />{' '}
-                <span className="lp-yellow">entrega e<br className="mobile-break" /> instalação grátis.</span>
+                Carro não liga?<br />
+                Bateria Salvador com <span className="lp-yellow">entrega rápida</span> e <span className="lp-yellow">instalação gratuita.</span>
               </h1>
               <p className="hero-description">
                 Não fique parado na rua ou na garagem. Levamos a bateria certa até você onde estiver, testamos seu sistema elétrico sem custo e instalamos na hora.
@@ -360,7 +359,7 @@ f.parentNode.insertBefore(j,f);
           <div className="container">
             <div className="section-heading split-heading">
               <div>
-                <p className="eyebrow blue">LINHA MOURA EM SALVADOR</p>
+                <p className="eyebrow blue">BATERIA MOURA SALVADOR</p>
                 <h2>Baterias Moura com até 24 meses de garantia oficial.</h2>
               </div>
               <p>A marca líder do Brasil instalada no seu veículo com o melhor custo-benefício de Salvador.</p>
