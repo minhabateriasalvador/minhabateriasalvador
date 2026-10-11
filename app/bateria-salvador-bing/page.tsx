@@ -156,10 +156,10 @@ f.parentNode.insertBefore(j,f);
                 <span className="tiny-bolt"><Zap size={14} fill="currentColor" /></span>
                 DISK BATERIA EM SALVADOR • SOCORRO RÁPIDO
               </p>
-              <h1>
-                Seu carro não liga?<br />
-                Bateria em Salvador com<br />
-                <span>entrega e instalação grátis.</span>
+              <h1 className="lp-hero-title">
+                <span className="lp-title-question">Seu carro não liga?</span>
+                <span className="lp-title-main">Bateria em Salvador com </span>
+                <span className="lp-title-highlight">entrega e instalação grátis.</span>
               </h1>
               <p className="hero-description">
                 Não fique parado na rua ou na garagem. Levamos a bateria certa até você onde estiver, testamos seu sistema elétrico sem custo e instalamos na hora.
@@ -315,7 +315,7 @@ f.parentNode.insertBefore(j,f);
             <div className="section-heading split-heading">
               <div>
                 <p className="eyebrow blue">COMO FUNCIONA O ATENDIMENTO</p>
-                <h2>Em 3 passos rápidos seu carro<br />está funcionando novamente.</h2>
+                <h2>Em 3 passos rápidos seu carro<br className="desktop-break" /> está funcionando novamente.</h2>
               </div>
               <p>Nossos técnicos vão até onde você estiver em Salvador. Veja como é simples e sem dor de cabeça:</p>
             </div>
