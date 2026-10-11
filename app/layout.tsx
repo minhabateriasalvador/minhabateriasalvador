@@ -98,7 +98,7 @@ export default function RootLayout({ children }: Readonly<{children: React.React
           dangerouslySetInnerHTML={{
             __html: `
 window.dataLayer = window.dataLayer || [];
-var isLp = window.location.pathname === '/lp' || window.location.pathname.startsWith('/lp');
+var isLp = window.location.hostname.startsWith('lp.') || window.location.pathname === '/lp' || window.location.pathname.startsWith('/lp');
 if (!isLp) {
   function loadGtm() {
     if (window.gtmLoaded) return;
