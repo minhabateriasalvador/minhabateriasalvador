@@ -153,12 +153,13 @@ f.parentNode.insertBefore(j,f);
           <div className="container hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">
-                <span className="tiny-bolt"><Zap size={14} fill="currentColor" /></span>
                 DISK BATERIA SALVADOR • SOCORRO RÁPIDO
               </p>
               <h1 className="lp-hero-title">
                 Carro não liga?<br />
-                Bateria Salvador com <span className="lp-yellow">entrega rápida</span> e <span className="lp-yellow">instalação gratuita.</span>
+                Bateria Salvador<br className="desktop-break" />{' '}
+                com <span className="lp-yellow">entrega rápida</span><br className="desktop-break" />{' '}
+                e <span className="lp-yellow">instalação gratuita.</span>
               </h1>
               <p className="hero-description">
                 Não fique parado na rua ou na garagem. Levamos a bateria certa até você onde estiver, testamos seu sistema elétrico sem custo e instalamos na hora.
