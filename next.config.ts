@@ -23,6 +23,30 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'lp.minhabateria.com.br',
+          },
+        ],
+        destination: '/lp/',
+      },
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'lp.minhabateriasalvador.com.br',
+          },
+        ],
+        destination: '/lp/',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
