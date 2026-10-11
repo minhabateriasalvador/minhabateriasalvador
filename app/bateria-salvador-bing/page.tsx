@@ -157,9 +157,9 @@ f.parentNode.insertBefore(j,f);
                 DISK BATERIA EM SALVADOR • SOCORRO RÁPIDO
               </p>
               <h1 className="lp-hero-title">
-                <span className="lp-title-question">Seu carro não liga?</span>
-                <span className="lp-title-main">Bateria em Salvador com </span>
-                <span className="lp-title-highlight">entrega e instalação grátis.</span>
+                Seu carro não liga?<br />
+                Bateria em Salvador<br className="mobile-break" /> com<br className="desktop-break" />{' '}
+                <span className="lp-yellow">entrega e<br className="mobile-break" /> instalação grátis.</span>
               </h1>
               <p className="hero-description">
                 Não fique parado na rua ou na garagem. Levamos a bateria certa até você onde estiver, testamos seu sistema elétrico sem custo e instalamos na hora.
@@ -274,7 +274,7 @@ f.parentNode.insertBefore(j,f);
                       data-location={`lp-catalog-${i}`}
                       aria-label={`Solicitar orçamento de ${category.name.toLowerCase()} no WhatsApp`}
                     >
-                      Pedir orçamento desta bateria <ArrowUpRight size={18} />
+                      Pedir orçamento <ArrowUpRight size={18} />
                     </a>
                   </div>
                 </article>
@@ -283,7 +283,7 @@ f.parentNode.insertBefore(j,f);
 
             <div className="catalog-action">
               <LpContactButton location="lp-catalog-bottom">
-                Consultar bateria para meu modelo no WhatsApp
+                Solicitar Orçamento
               </LpContactButton>
               <p>Informe o modelo e ano do seu carro para nossa equipe indicar a amperagem exata.</p>
             </div>
@@ -397,7 +397,7 @@ f.parentNode.insertBefore(j,f);
                 <strong>Não sabe qual a amperagem correta para o seu veículo?</strong>
                 <p>Nossa equipe confere a tabela oficial de montadora para você não errar na compra.</p>
               </div>
-              <LpContactButton location="lp-moura-box">Falar com atendente agora</LpContactButton>
+              <LpContactButton location="lp-moura-box">Falar com atendente</LpContactButton>
             </div>
           </div>
         </section>

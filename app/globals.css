@@ -924,17 +924,15 @@ body:has(.landing-page) > .footer {
   line-height: 1.15;
   letter-spacing: -0.035em;
   margin-bottom: 20px;
-  text-wrap: balance;
 }
-.lp-title-question {
+.lp-yellow {
+  color: var(--yellow) !important;
+}
+.desktop-break {
   display: block;
 }
-.lp-title-main {
-  display: block;
-}
-.lp-title-highlight {
-  color: var(--yellow);
-  display: block;
+.mobile-break {
+  display: none !important;
 }
 .lp-hero-btn {
   box-shadow: 0 8px 24px rgba(255, 218, 0, 0.35);
@@ -1133,16 +1131,7 @@ body:has(.landing-page) > .footer {
     width: auto;
   }
   .lp-header-cta {
-    padding: 8px 12px !important;
-    font-size: 0.82rem !important;
-    gap: 5px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0;
-  }
-  .lp-header-cta svg {
-    width: 16px !important;
-    height: 16px !important;
-    flex-shrink: 0;
+    display: none !important;
   }
   .lp-header-phone {
     display: none;
@@ -1154,21 +1143,15 @@ body:has(.landing-page) > .footer {
     padding-top: 36px;
   }
   .lp-hero-title {
-    font-size: clamp(1.65rem, 6.4vw, 2.15rem) !important;
-    line-height: 1.2 !important;
-    text-wrap: balance !important;
+    font-size: clamp(1.75rem, 6.8vw, 2.25rem) !important;
+    line-height: 1.16 !important;
     margin-bottom: 16px !important;
   }
-  .lp-title-question {
-    display: block;
-    margin-bottom: 5px;
+  .desktop-break {
+    display: none !important;
   }
-  .lp-title-main {
-    display: inline;
-  }
-  .lp-title-highlight {
-    color: var(--yellow);
-    display: inline;
+  .mobile-break {
+    display: block !important;
   }
   .lp-testimonials-grid {
     grid-template-columns: 1fr;
