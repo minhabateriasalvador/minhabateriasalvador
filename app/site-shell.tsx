@@ -73,7 +73,11 @@ function isLandingPage(pathname: string | null): boolean {
   if (typeof window !== 'undefined' && window.location.hostname.startsWith('lp.')) {
     return true;
   }
-  return pathname === '/lp' || (pathname ? pathname.startsWith('/lp') : false);
+  return (
+    pathname === '/lp' ||
+    pathname === '/bateria-salvador-bing' ||
+    (pathname ? pathname.startsWith('/lp') || pathname.startsWith('/bateria-salvador-bing') : false)
+  );
 }
 
 export function SiteHeader() {

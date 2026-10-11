@@ -26,7 +26,8 @@ export function MobilePhoneIcon({ size = 20 }: { size?: number }) {
 export function MobileContact() {
   const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
-  const isLp = pathname === '/lp' || pathname?.startsWith('/lp');
+  const isBing = pathname === '/bateria-salvador-bing' || (pathname ? pathname.startsWith('/bateria-salvador-bing') : false);
+  const isLp = pathname === '/lp' || (pathname ? pathname.startsWith('/lp') : false) || isBing;
 
   useEffect(() => {
     // Se o usuário prefere movimento reduzido, exibe direto
@@ -54,7 +55,8 @@ export function MobileContact() {
     };
   }, []);
 
-  const lpWhatsAppUrl = `https://api.whatsapp.com/send?phone=${site.phone}&text=${encodeURIComponent('Encontrei vocês no *Google*, gostaria de um orçamento de bateria')}`;
+  const sourceName = isBing ? 'Bing' : 'Google';
+  const lpWhatsAppUrl = `https://api.whatsapp.com/send?phone=${site.phone}&text=${encodeURIComponent(`Encontrei vocês no *${sourceName}*, gostaria de um orçamento de bateria`)}`;
 
   return (
     <div
