@@ -274,7 +274,7 @@ f.parentNode.insertBefore(j,f);
                       data-location={`lp-catalog-${i}`}
                       aria-label={`Solicitar orçamento de ${category.name.toLowerCase()} no WhatsApp`}
                     >
-                      Pedir orçamento <ArrowUpRight size={18} />
+                      Solicitar Orçamento <ArrowUpRight size={18} />
                     </a>
                   </div>
                 </article>
@@ -438,7 +438,7 @@ f.parentNode.insertBefore(j,f);
 
               <div style={{ marginTop: '36px' }}>
                 <LpContactButton location="lp-coverage">
-                  Pedir bateria no WhatsApp com entrega grátis
+                  Solicitar Bateria!
                 </LpContactButton>
               </div>
             </div>
