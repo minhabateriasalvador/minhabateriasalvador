@@ -1154,7 +1154,7 @@ body:has(.landing-page) > .footer {
   }
   .lp-hero-title {
     font-size: clamp(2.2rem, 7.5vw, 2.5rem) !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     line-height: 1.16 !important;
     margin-bottom: 18px !important;
   }
