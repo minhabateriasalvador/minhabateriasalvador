@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { MobileContact } from './mobile-contact';
 import { SiteHeader, SiteFooter, SiteGtm, SiteSchema } from './site-shell';
 import { ContactEvents } from './contact-events';
+import { GoogleAdsAttribution } from './google-ads-attribution';
 import { ScrollReveal } from './scroll-reveal';
 import { indexable, site, social, neighborhoods } from './site';
 import './globals.css';
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{children: React.React
         <SiteFooter />
         <MobileContact />
         <ContactEvents />
+        <GoogleAdsAttribution />
         <ScrollReveal />
         <SiteSchema />
       </body>
