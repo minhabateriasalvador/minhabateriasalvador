@@ -106,7 +106,14 @@ function anexarNoLink(link: HTMLAnchorElement, invisivel: string): void {
     const u = new URL(link.href);
     const txt = u.searchParams.get('text') || '';
     if (!txt.includes(ZW_DELIM)) {
-      u.searchParams.set('text', txt + invisivel);
+      // Insere antes da última palavra para evitar .trim() do WhatsApp/iOS
+      // preservando integralmente o início da frase ("Encontrei vocês no *Google*")
+      const ultimoEspaco = txt.trimEnd().lastIndexOf(' ');
+      const novoTexto =
+        ultimoEspaco > 0
+          ? txt.slice(0, ultimoEspaco + 1) + invisivel + txt.slice(ultimoEspaco + 1)
+          : txt + invisivel;
+      u.searchParams.set('text', novoTexto);
       link.href = u.toString();
     }
   } catch {}
