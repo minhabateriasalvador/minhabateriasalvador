@@ -106,13 +106,19 @@ function anexarNoLink(link: HTMLAnchorElement, invisivel: string): void {
     const u = new URL(link.href);
     const txt = u.searchParams.get('text') || '';
     if (!txt.includes(ZW_DELIM)) {
-      // Insere antes da última palavra para evitar .trim() do WhatsApp/iOS
-      // preservando integralmente o início da frase ("Encontrei vocês no *Google*")
-      const ultimoEspaco = txt.trimEnd().lastIndexOf(' ');
-      const novoTexto =
-        ultimoEspaco > 0
-          ? txt.slice(0, ultimoEspaco + 1) + invisivel + txt.slice(ultimoEspaco + 1)
-          : txt + invisivel;
+      // Insere logo após a primeira vírgula (", ") — ex.: "Encontrei vocês no *Google*, [ZW]gostaria..."
+      // Assim preserva intacto o gatilho inicial ("Encontrei vocês no *Google*"), evita .trim() nas bordas
+      // e sobrevive mesmo quando o cliente edita ou apaga o final da mensagem antes de enviar.
+      const posVirgula = txt.indexOf(', ');
+      const primeiroEspaco = txt.trimStart().indexOf(' ');
+      let novoTexto: string;
+      if (posVirgula > 0) {
+        novoTexto = txt.slice(0, posVirgula + 2) + invisivel + txt.slice(posVirgula + 2);
+      } else if (primeiroEspaco > 0) {
+        novoTexto = txt.slice(0, primeiroEspaco + 1) + invisivel + txt.slice(primeiroEspaco + 1);
+      } else {
+        novoTexto = txt + invisivel;
+      }
       u.searchParams.set('text', novoTexto);
       link.href = u.toString();
     }
